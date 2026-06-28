@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <!-- Bootstrap 3.4.1 (ako kurz Developer Boss učí) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Mrazosoft" />
+    <meta name="description" content="Peter Mráz — webový vývojár. Tvorba webov, aplikácií a e-shopov." />
+    <meta name="language" content="sk" />
+    <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <title>Peter Mráz — Webový vývojár</title>
+
+    <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Videopozadie (presne ako v kurze) -->
+<video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.mp4" type="video/mp4">
+</video>
+
+<!-- Modálne okno — cookies (presne ako v kurze) -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle">Oznámenie o cookies</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="cookieText">Táto stránka nezbiera marketingové cookies!</p>
+                <p><strong id="mandatoryText">Povinné: Analytické cookies.</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="tlacitko-moje" id="closeButton" data-dismiss="modal">Zatvoriť</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigácia (Bootstrap 3 navbar-default, navbar-fixed-top) -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="tlacitko-moje" id="toggleLanguageButton">SK/EN</button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html">
+                <img src="images/melAdidi2.jpeg" alt="Peter Mráz" />
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="index.html">Domov</a></li>
+                <li><a href="vzdelanie.html">Vzdelanie</a></li>
+                <li><a href="galeria.html">Fotogaléria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Obsah stránky -->
+<div class="page-body">
+
+    <!-- Hlavný obsah (zobrazuje sa nad videom) -->
+    <div class="content">
+        <div class="container">
+            <h1>Peter Mráz</h1>
+            <h2>Webový vývojár</h2>
+            <p>
+                Vítajte na mojej osobnej stránke. Tvorím webové stránky, aplikácie a e-shopy.<br />
+                Absolvoval som kurz Developer Boss od DUFEKSOFT — HTML, CSS, Bootstrap, C#, Umbraco CMS.
+            </p>
+            <br />
+            <a href="vzdelanie.html" class="tlacitko-moje">Vzdelanie</a>
+            &nbsp;
+            <a href="kontakt.html" class="tlacitko-moje">Kontakt</a>
+            &nbsp;
+            <a href="galeria.html" class="tlacitko-moje">Fotogaléria</a>
+        </div>
+    </div>
+
+    <!-- O mne sekcia -->
+    <div style="background: rgba(255,255,255,0.9); padding: 40px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2><i class="fas fa-user"></i> O mne</h2>
+                    <hr />
+                </div>
+            </div>
+            <div class="row contact-items">
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-code glyphicon"></i>
+                    <h3>Programovanie</h3>
+                    <p>HTML, CSS, Bootstrap 3, JavaScript, C#, Umbraco CMS. Staviam weby podľa moderných štandardov.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-mobile-alt glyphicon"></i>
+                    <h3>Responzívny dizajn</h3>
+                    <p>Každý web stavaiam tak, aby bol správne zobrazený na počítači, tablete aj mobile.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="fas fa-shopping-cart glyphicon"></i>
+                    <h3>E-shopy</h3>
+                    <p>Kompletné riešenia pre online predaj — od produktového katalogu po nákupný košík.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Pätička -->
+<div class="container">
+    <div class="pata">
+        <hr />
+        Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email: petermraz@mrazosoft.sk
+    </div>
+</div>
+
+<script src="scripts/jquery.lazy.min.js"></script>
+<script src="scripts/petermraz.js"></script>
+<script>
+    // Cookie modal presne ako v kurze
+    $('#myModal').modal('show');
+
+    // SK/EN prepínač
+    document.getElementById("toggleLanguageButton").addEventListener("click", function () {
+        var currentUrl = window.location.href;
+        var newUrl;
+        if (currentUrl.includes('/en/')) {
+            newUrl = currentUrl.replace('/en/', '/sk/');
+        } else if (currentUrl.includes('/sk/')) {
+            newUrl = currentUrl.replace('/sk/', '/en/');
+        } else {
+            newUrl = currentUrl.replace('index.html', 'en/index.html');
+        }
+        if (newUrl && newUrl !== currentUrl) {
+            window.location.href = newUrl;
+        }
+    });
+</script>
+</body>
+</html>

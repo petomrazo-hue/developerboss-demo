@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Vzdelanie Petra Mráza — školy, kurzy a certifikáty." />
+    <meta name="author" content="Mrazosoft" />
+    <title>Vzdelanie — Peter Mráz</title>
+
+    <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Videopozadie -->
+<video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.mp4" type="video/mp4">
+</video>
+
+<!-- Navigácia -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="tlacitko-moje" id="toggleLanguageButton">SK/EN</button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html">
+                <img src="images/melAdidi2.jpeg" alt="Peter Mráz" />
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Domov</a></li>
+                <li class="active"><a href="vzdelanie.html">Vzdelanie</a></li>
+                <li><a href="galeria.html">Fotogaléria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Obsah (rekonštrukcia Vzdelanie.cshtml + education.cshtml) -->
+<div class="page-body">
+    <div style="background: rgba(255,255,255,0.92); min-height: 100vh; padding: 40px 0 60px;">
+        <div class="container">
+
+            <div class="telo">
+                <h1>VZDELANIE</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Základná škola</h2>
+                        <p>ZŠŠM PP</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Stredná škola</h2>
+                        <p>HAOB KK</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Vysoká škola</h2>
+                        <p>Vysoká škola života a iného zverstva</p>
+                    </div>
+                </div>
+
+                <h2>KURZY A CERTIFIKÁTY</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul>
+                            <li>Kurz HTML</li>
+                            <li>Kurz CSS</li>
+                            <li>Kurz MVC</li>
+                            <li>Bootstrap</li>
+                            <li>Barmanský kurz</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Developer Boss kurz — hlavný kurz -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Developer Boss — DUFEKSOFT</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-4"><span class="label label-primary">Modul 1</span> Úvod &amp; nástroje</div>
+                                    <div class="col-md-4"><span class="label label-primary">Modul 2</span> HTML</div>
+                                    <div class="col-md-4"><span class="label label-primary">Modul 3</span> CSS</div>
+                                    <div class="col-md-4"><span class="label label-info">Modul 4</span> MVC</div>
+                                    <div class="col-md-4"><span class="label label-info">Modul 5</span> Bootstrap</div>
+                                    <div class="col-md-4"><span class="label label-info">Modul 6</span> Formuláre</div>
+                                    <div class="col-md-4"><span class="label label-success">Modul 7</span> C#</div>
+                                    <div class="col-md-4"><span class="label label-success">Modul 8</span> CMS</div>
+                                    <div class="col-md-4"><span class="label label-success">Modul 9</span> CMS 2</div>
+                                    <div class="col-md-4"><span class="label label-warning">Modul 10</span> Základy eshopu</div>
+                                    <div class="col-md-4"><span class="label label-warning">Modul 11</span> Realizácia eshopu</div>
+                                    <div class="col-md-4"><span class="label label-danger">Modul 12</span> Optimalizácie</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Pätička -->
+<div class="container">
+    <div class="pata">
+        <hr />
+        Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email: petermraz@mrazosoft.sk
+    </div>
+</div>
+
+<script>
+    document.getElementById("toggleLanguageButton").addEventListener("click", function () {
+        window.location.href = "education.html";
+    });
+</script>
+</body>
+</html>
