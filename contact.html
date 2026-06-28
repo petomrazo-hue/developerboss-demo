@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -8,9 +8,9 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Kontakt — Peter Mráz, webový vývojár." />
+    <meta name="description" content="Contact — Peter Mráz, web developer." />
     <meta name="author" content="Mrazosoft" />
-    <title>Kontakt — Peter Mráz</title>
+    <title>Contact — Peter Mráz</title>
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
@@ -29,16 +29,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html"><img src="images/melAdidi2.jpeg" alt="melAdidi" /></a>
+            <a href="index-en.html"><img src="images/melAdidi2.jpeg" alt="melAdidi" /></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Domov</a></li>
-                <li><a href="vzdelanie.html">Vzdelanie</a></li>
-                <li><a href="galeria.html">Fotografie</a></li>
-                <li><a href="video.html">Video</a></li>
-                <li class="active"><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="prihlasenie.html">Prihlásenie</a></li>
+                <li><a href="index-en.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="gallery.html">Photos</a></li>
+                <li><a href="video-en.html">Video</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </div>
@@ -48,23 +48,20 @@
     <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 40px 0 60px;">
         <div class="container">
 
-            <!-- Rekonštrukcia ContactForm.cshtml -->
             <div id="successMsg" style="display:none;">
-                <p>Ďakujeme za správu.</p>
-                <p class="medium">Správa bola úspešne odoslaná.<br />Ozveme sa čoskoro.</p>
+                <p>Thank you for your message.</p>
+                <p class="medium">Your message was sent successfully.<br />We will get back to you shortly.</p>
             </div>
 
             <div id="contactFormWrapper">
-                <h3>Napíšte nám správu</h3>
+                <h3>Send us a message</h3>
 
-                <!-- Kontaktné info (z _Footer.cshtml) -->
                 <div class="row" style="margin-bottom:20px;">
                     <div class="col-md-4 contact-items">
                         <p><i class="fas fa-envelope glyphicon"></i><br />petermraz@mrazosoft.sk</p>
                         <p><i class="fas fa-phone glyphicon"></i><br />+421 9XX XXX XXX</p>
                     </div>
                     <div class="col-md-8">
-                        <!-- Form — presná rekonštrukcia ContactForm.cshtml -->
                         <form id="contactForm" class="form-horizontal" role="form"
                               action="https://formspree.io/f/xpwzgqkl" method="POST">
 
@@ -72,60 +69,54 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div id="validationSummary" class="text-danger" style="display:none;">
-                                            Správu sa nepodarilo odoslať. Opravte chyby a skúste správu odoslať znovu.
+                                            The message could not be sent. Please fix the errors and try again.
                                         </div>
 
-                                        <!-- Priezvisko a meno -->
                                         <div class="form-item">
-                                            <label for="Name">Priezvisko a meno</label>
+                                            <label for="Name">Last name and first name</label>
                                             <input type="text" id="Name" name="Name" class="form-control"
-                                                   placeholder="Vaše meno a priezvisko" required />
+                                                   placeholder="Your name and surname" required />
                                             <span class="field-validation-error" id="nameError" style="display:none;">
-                                                Priezvisko a meno musí byť zadané
+                                                Last name and first name must be provided
                                             </span>
                                         </div>
 
-                                        <!-- E-mail -->
                                         <div class="form-item">
                                             <label for="Email">E-mail</label>
                                             <input type="email" id="Email" name="Email" class="form-control"
-                                                   placeholder="vas@email.sk" required />
+                                                   placeholder="you@email.com" required />
                                             <span class="field-validation-error" id="emailError" style="display:none;">
-                                                E-mail musí byť zadaný
+                                                E-mail must be provided
                                             </span>
                                         </div>
 
-                                        <!-- Text správy -->
                                         <div class="form-item">
-                                            <label for="Text">Text správy</label>
+                                            <label for="Text">Message text</label>
                                             <textarea id="Text" name="Text" class="form-control"
                                                       style="height:150px"
-                                                      placeholder="Napíšte vašu správu..." required></textarea>
+                                                      placeholder="Write your message..." required></textarea>
                                             <span class="field-validation-error" id="textError" style="display:none;">
-                                                Text správy musí byť zadaný
+                                                Message text must be provided
                                             </span>
                                         </div>
 
-                                        <!-- Skryté api-password polia (bot ochrana — presná rekonštrukcia) -->
                                         <div class="api-password-group">
-                                            <label>Heslo</label>
+                                            <label>Password</label>
                                             <input type="password" id="Password" name="Password" class="form-control" />
                                         </div>
                                         <div class="api-password-group">
-                                            <label>Potvrdenie hesla</label>
+                                            <label>Confirm password</label>
                                             <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" />
                                         </div>
 
-                                        <!-- Honeypot pre spam (staticka náhrada za server-side ApiKeyValidator) -->
                                         <input type="text" name="_gotcha" style="display:none;" />
                                     </div>
                                 </div>
 
-                                <!-- Submit — presná rekonštrukcia: a.tlacitko-moje kliká skrytý submit -->
                                 <div class="row submit">
                                     <div class="col-md-12">
                                         <a href="#" onclick="document.getElementById('submitButton').click(); return false;"
-                                           class="tlacitko-moje">Odoslať správu</a>
+                                           class="tlacitko-moje">Send message</a>
                                         <input type="submit" id="submitButton" class="hidden" />
                                     </div>
                                 </div>
@@ -150,7 +141,6 @@
 <script src="scripts/document.ready.js"></script>
 <script src="scripts/petermraz.js"></script>
 <script>
-    // Odoslanie formulára cez Formspree (AJAX)
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
         var valid = true;
@@ -183,15 +173,14 @@
                 $('#successMsg').show();
             },
             error: function() {
-                // Fallback: odošli mailto
-                window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Správa z webu&body='
+                window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Message from website&body='
                     + encodeURIComponent($('#Text').val());
             }
         });
     });
 
     document.getElementById("toggleLanguageButton").addEventListener("click", function () {
-        window.location.href = "contact.html";
+        window.location.href = "kontakt.html";
     });
 </script>
 </body>
