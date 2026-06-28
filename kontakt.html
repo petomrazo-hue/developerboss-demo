@@ -4,18 +4,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Mrazosoft" />
     <meta name="description" content="Kontakt — Peter Mráz, webový vývojár." />
+    <meta name="language" content="sk" />
     <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <link rel="shortcut icon" href="images/melAdidi2.jpeg" />
+
     <title>Kontakt — Peter Mráz</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
+
+    <script src="scripts/jquery.lazy.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
 
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.webm" type="video/webm">
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
@@ -48,7 +64,6 @@
     <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 40px 0 60px;">
         <div class="container">
 
-            <!-- Rekonštrukcia ContactForm.cshtml -->
             <div id="successMsg" style="display:none;">
                 <p>Ďakujeme za správu.</p>
                 <p class="medium">Správa bola úspešne odoslaná.<br />Ozveme sa čoskoro.</p>
@@ -57,17 +72,14 @@
             <div id="contactFormWrapper">
                 <h3>Napíšte nám správu</h3>
 
-                <!-- Kontaktné info (z _Footer.cshtml) -->
-                <div class="row" style="margin-bottom:20px;">
+                <div class="row">
                     <div class="col-md-4 contact-items">
                         <p><i class="fas fa-envelope glyphicon"></i><br />petermraz@mrazosoft.sk</p>
                         <p><i class="fas fa-phone glyphicon"></i><br />+421 9XX XXX XXX</p>
                     </div>
                     <div class="col-md-8">
-                        <!-- Form — presná rekonštrukcia ContactForm.cshtml -->
                         <form id="contactForm" class="form-horizontal" role="form"
                               action="https://formspree.io/f/xpwzgqkl" method="POST">
-
                             <div class="naplnspajzu-form">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -75,38 +87,24 @@
                                             Správu sa nepodarilo odoslať. Opravte chyby a skúste správu odoslať znovu.
                                         </div>
 
-                                        <!-- Priezvisko a meno -->
                                         <div class="form-item">
                                             <label for="Name">Priezvisko a meno</label>
-                                            <input type="text" id="Name" name="Name" class="form-control"
-                                                   placeholder="Vaše meno a priezvisko" required />
-                                            <span class="field-validation-error" id="nameError" style="display:none;">
-                                                Priezvisko a meno musí byť zadané
-                                            </span>
+                                            <input type="text" id="Name" name="Name" class="form-control" />
+                                            <span class="field-validation-error" id="nameError" style="display:none;">Priezvisko a meno musí byť zadané</span>
                                         </div>
 
-                                        <!-- E-mail -->
                                         <div class="form-item">
                                             <label for="Email">E-mail</label>
-                                            <input type="email" id="Email" name="Email" class="form-control"
-                                                   placeholder="vas@email.sk" required />
-                                            <span class="field-validation-error" id="emailError" style="display:none;">
-                                                E-mail musí byť zadaný
-                                            </span>
+                                            <input type="email" id="Email" name="Email" class="form-control" />
+                                            <span class="field-validation-error" id="emailError" style="display:none;">E-mail musí byť zadaný</span>
                                         </div>
 
-                                        <!-- Text správy -->
                                         <div class="form-item">
                                             <label for="Text">Text správy</label>
-                                            <textarea id="Text" name="Text" class="form-control"
-                                                      style="height:150px"
-                                                      placeholder="Napíšte vašu správu..." required></textarea>
-                                            <span class="field-validation-error" id="textError" style="display:none;">
-                                                Text správy musí byť zadaný
-                                            </span>
+                                            <textarea id="Text" name="Text" class="form-control" style="height:150px"></textarea>
+                                            <span class="field-validation-error" id="textError" style="display:none;">Text správy musí byť zadaný</span>
                                         </div>
 
-                                        <!-- Skryté api-password polia (bot ochrana — presná rekonštrukcia) -->
                                         <div class="api-password-group">
                                             <label>Heslo</label>
                                             <input type="password" id="Password" name="Password" class="form-control" />
@@ -116,16 +114,12 @@
                                             <input type="password" id="ConfirmPassword" name="ConfirmPassword" class="form-control" />
                                         </div>
 
-                                        <!-- Honeypot pre spam (staticka náhrada za server-side ApiKeyValidator) -->
                                         <input type="text" name="_gotcha" style="display:none;" />
                                     </div>
                                 </div>
-
-                                <!-- Submit — presná rekonštrukcia: a.tlacitko-moje kliká skrytý submit -->
                                 <div class="row submit">
                                     <div class="col-md-12">
-                                        <a href="#" onclick="document.getElementById('submitButton').click(); return false;"
-                                           class="tlacitko-moje">Odoslať správu</a>
+                                        <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="tlacitko-moje">Odoslať správu</a>
                                         <input type="submit" id="submitButton" class="hidden" />
                                     </div>
                                 </div>
@@ -141,52 +135,33 @@
 
 <div class="container">
     <div class="pata">
-        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
-        Tel: +421 9XX XXX XXX<br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email : petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/jquery.lazy.min.js"></script>
 <script src="scripts/document.ready.js"></script>
 <script src="scripts/petermraz.js"></script>
 <script>
-    // Odoslanie formulára cez Formspree (AJAX)
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
         var valid = true;
-
-        if (!$('#Name').val().trim()) {
-            $('#nameError').show(); valid = false;
-        } else { $('#nameError').hide(); }
-
-        if (!$('#Email').val().trim()) {
-            $('#emailError').show(); valid = false;
-        } else { $('#emailError').hide(); }
-
-        if (!$('#Text').val().trim()) {
-            $('#textError').show(); valid = false;
-        } else { $('#textError').hide(); }
-
-        if (!valid) {
-            $('#validationSummary').show();
-            return;
-        }
+        if (!$('#Name').val().trim()) { $('#nameError').show(); valid = false; } else { $('#nameError').hide(); }
+        if (!$('#Email').val().trim()) { $('#emailError').show(); valid = false; } else { $('#emailError').hide(); }
+        if (!$('#Text').val().trim()) { $('#textError').show(); valid = false; } else { $('#textError').hide(); }
+        if (!valid) { $('#validationSummary').show(); return; }
         $('#validationSummary').hide();
-
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
-            success: function() {
-                $('#contactFormWrapper').hide();
-                $('#successMsg').show();
-            },
-            error: function() {
-                // Fallback: odošli mailto
-                window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Správa z webu&body='
-                    + encodeURIComponent($('#Text').val());
-            }
+            success: function() { $('#contactFormWrapper').hide(); $('#successMsg').show(); },
+            error: function() { window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Správa z webu&body=' + encodeURIComponent($('#Text').val()); }
         });
     });
 

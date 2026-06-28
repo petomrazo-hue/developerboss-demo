@@ -4,13 +4,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Members area — Peter Mráz" />
+    <meta name="copyright" content="Mrazosoft" />
+    <meta name="description" content="Members area — Peter Mráz." />
+    <meta name="language" content="en" />
     <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <link rel="shortcut icon" href="images/melAdidi2.jpeg" />
+
     <title>Members area — Peter Mráz</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
+
+    <script src="scripts/jquery.lazy.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 
     <script>
@@ -22,6 +37,7 @@
 <body>
 
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.webm" type="video/webm">
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
@@ -54,23 +70,10 @@
     <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 60px 0;">
         <div class="container">
 
-            <div class="member-info">
-                <h3>Members area</h3>
-                <hr />
-
-                <p>
-                    <i class="fas fa-user glyphicon"></i>
-                    Logged in user: <strong id="displayUsername"></strong>
-                </p>
-
-                <p>Welcome to the protected members area!</p>
-                <p class="medium">Here you would find exclusive content available only to members.</p>
-
-                <br />
-                <a href="#" id="logoutLink" class="tlacitko-moje">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
-            </div>
+            <p id="displayUsername"></p>
+            <p>
+                <a href="#" id="logoutLink" class="tlacitko-moje">Logout</a>
+            </p>
 
         </div>
     </div>
@@ -78,12 +81,17 @@
 
 <div class="container">
     <div class="pata">
-        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email : petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/jquery.lazy.min.js"></script>
 <script src="scripts/document.ready.js"></script>
+<script src="scripts/petermraz.js"></script>
 <script>
     var user = sessionStorage.getItem('loggedInUser');
     if (user) {

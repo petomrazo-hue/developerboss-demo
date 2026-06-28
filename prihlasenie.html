@@ -4,18 +4,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Prihlásenie — Peter Mráz" />
+    <meta name="copyright" content="Mrazosoft" />
+    <meta name="description" content="Prihlásenie — Peter Mráz." />
+    <meta name="language" content="sk" />
     <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <link rel="shortcut icon" href="images/melAdidi2.jpeg" />
+
     <title>Prihlásenie — Peter Mráz</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
+
+    <script src="scripts/jquery.lazy.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
 
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.webm" type="video/webm">
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
@@ -48,45 +64,30 @@
     <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 60px 0;">
         <div class="container">
 
-            <!-- Rekonštrukcia Login.cshtml -->
             <div class="login-form">
-                <h3>Prihlásenie do členskej sekcie</h3>
-                <hr />
-
-                <div id="loginError" class="alert alert-danger" style="display:none;">
-                    Nesprávne meno alebo heslo. Skúste to znova.
-                </div>
-
-                <form id="loginForm" class="developerboss-form">
-                    <div class="form-item">
-                        <label for="Username">Používateľské meno</label>
-                        <input type="text" id="Username" name="Username" class="form-control"
-                               placeholder="Zadajte meno" autocomplete="username" />
-                        <span class="field-validation-error" id="usernameError" style="display:none;">
-                            Meno musí byť zadané
-                        </span>
-                    </div>
-
-                    <div class="form-item">
-                        <label for="Password">Heslo</label>
-                        <input type="password" id="Password" name="Password" class="form-control"
-                               placeholder="Zadajte heslo" autocomplete="current-password" />
-                        <span class="field-validation-error" id="passwordError" style="display:none;">
-                            Heslo musí byť zadané
-                        </span>
-                    </div>
-
-                    <div class="form-section">
-                        <!-- Presná rekonštrukcia: a.tlacitko-moje kliká skrytý submit -->
-                        <a href="#" onclick="document.getElementById('loginSubmit').click(); return false;"
-                           class="tlacitko-moje">Prihlásiť sa</a>
-                        <input type="submit" id="loginSubmit" class="hidden" />
+                <form id="loginForm" class="form-horizontal" role="form">
+                    <div class="developerboss-form">
+                        <div id="loginError" class="alert alert-danger" style="display:none;">
+                            Neplatné meno alebo heslo.
+                        </div>
+                        <div class="form-item">
+                            <label for="Username">Prihlasovacie meno</label>
+                            <input type="text" id="Username" name="Username" class="form-control" placeholder="Váš e-mail" />
+                            <span class="field-validation-error" id="usernameError" style="display:none;">Prihlasovacie meno musí byť zadané</span>
+                        </div>
+                        <div class="form-item">
+                            <label for="Password">Heslo</label>
+                            <input type="password" id="Password" name="Password" class="form-control" placeholder="Vaše heslo" />
+                            <span class="field-validation-error" id="passwordError" style="display:none;">Heslo musí byť zadané</span>
+                        </div>
+                        <div class="form-section">
+                            <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="tlacitko-moje">Prihlásiť</a>
+                            <input type="submit" id="submitButton" class="hidden" />
+                        </div>
                     </div>
                 </form>
-
                 <p style="margin-top:20px; color:#888; font-size:13px;">
-                    <i class="fas fa-info-circle"></i>
-                    Prihlasovacie údaje: používateľské meno <strong>peter</strong>, heslo <strong>developerboss</strong>
+                    Prihlasovacie meno: <strong>peter</strong> &nbsp;|&nbsp; Heslo: <strong>developerboss</strong>
                 </p>
             </div>
 
@@ -96,18 +97,18 @@
 
 <div class="container">
     <div class="pata">
-        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email : petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/jquery.lazy.min.js"></script>
 <script src="scripts/document.ready.js"></script>
+<script src="scripts/petermraz.js"></script>
 <script>
-    // Rekonštrukcia MemberController.cs Login() — statická verzia cez sessionStorage
-    var VALID_USERNAME = "peter";
-    var VALID_PASSWORD = "developerboss";
-
-    // Ak už prihlásený, presmeruj na chránenú stránku
     if (sessionStorage.getItem('loggedInUser')) {
         window.location.href = 'chranena.html';
     }
@@ -117,12 +118,10 @@
         var u = $('#Username').val().trim();
         var p = $('#Password').val();
         var valid = true;
-
         if (!u) { $('#usernameError').show(); valid = false; } else { $('#usernameError').hide(); }
         if (!p) { $('#passwordError').show(); valid = false; } else { $('#passwordError').hide(); }
         if (!valid) return;
-
-        if (u === VALID_USERNAME && p === VALID_PASSWORD) {
+        if (u === 'peter' && p === 'developerboss') {
             sessionStorage.setItem('loggedInUser', u);
             window.location.href = 'chranena.html';
         } else {

@@ -4,18 +4,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Mrazosoft" />
     <meta name="description" content="Contact — Peter Mráz, web developer." />
+    <meta name="language" content="en" />
     <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <link rel="shortcut icon" href="images/melAdidi2.jpeg" />
+
     <title>Contact — Peter Mráz</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
+
+    <script src="scripts/jquery.lazy.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
 
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.webm" type="video/webm">
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
@@ -50,13 +66,13 @@
 
             <div id="successMsg" style="display:none;">
                 <p>Thank you for your message.</p>
-                <p class="medium">Your message was sent successfully.<br />We will get back to you shortly.</p>
+                <p class="medium">Your message has been sent successfully.<br />We will get back to you soon.</p>
             </div>
 
             <div id="contactFormWrapper">
                 <h3>Send us a message</h3>
 
-                <div class="row" style="margin-bottom:20px;">
+                <div class="row">
                     <div class="col-md-4 contact-items">
                         <p><i class="fas fa-envelope glyphicon"></i><br />petermraz@mrazosoft.sk</p>
                         <p><i class="fas fa-phone glyphicon"></i><br />+421 9XX XXX XXX</p>
@@ -64,40 +80,29 @@
                     <div class="col-md-8">
                         <form id="contactForm" class="form-horizontal" role="form"
                               action="https://formspree.io/f/xpwzgqkl" method="POST">
-
                             <div class="naplnspajzu-form">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div id="validationSummary" class="text-danger" style="display:none;">
-                                            The message could not be sent. Please fix the errors and try again.
+                                            The message could not be sent. Please correct the errors and try again.
                                         </div>
 
                                         <div class="form-item">
                                             <label for="Name">Last name and first name</label>
-                                            <input type="text" id="Name" name="Name" class="form-control"
-                                                   placeholder="Your name and surname" required />
-                                            <span class="field-validation-error" id="nameError" style="display:none;">
-                                                Last name and first name must be provided
-                                            </span>
+                                            <input type="text" id="Name" name="Name" class="form-control" />
+                                            <span class="field-validation-error" id="nameError" style="display:none;">Last name and first name must be entered</span>
                                         </div>
 
                                         <div class="form-item">
                                             <label for="Email">E-mail</label>
-                                            <input type="email" id="Email" name="Email" class="form-control"
-                                                   placeholder="you@email.com" required />
-                                            <span class="field-validation-error" id="emailError" style="display:none;">
-                                                E-mail must be provided
-                                            </span>
+                                            <input type="email" id="Email" name="Email" class="form-control" />
+                                            <span class="field-validation-error" id="emailError" style="display:none;">E-mail must be entered</span>
                                         </div>
 
                                         <div class="form-item">
                                             <label for="Text">Message text</label>
-                                            <textarea id="Text" name="Text" class="form-control"
-                                                      style="height:150px"
-                                                      placeholder="Write your message..." required></textarea>
-                                            <span class="field-validation-error" id="textError" style="display:none;">
-                                                Message text must be provided
-                                            </span>
+                                            <textarea id="Text" name="Text" class="form-control" style="height:150px"></textarea>
+                                            <span class="field-validation-error" id="textError" style="display:none;">Message text must be entered</span>
                                         </div>
 
                                         <div class="api-password-group">
@@ -112,11 +117,9 @@
                                         <input type="text" name="_gotcha" style="display:none;" />
                                     </div>
                                 </div>
-
                                 <div class="row submit">
                                     <div class="col-md-12">
-                                        <a href="#" onclick="document.getElementById('submitButton').click(); return false;"
-                                           class="tlacitko-moje">Send message</a>
+                                        <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="tlacitko-moje">Send message</a>
                                         <input type="submit" id="submitButton" class="hidden" />
                                     </div>
                                 </div>
@@ -132,50 +135,33 @@
 
 <div class="container">
     <div class="pata">
-        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
-        Tel: +421 9XX XXX XXX<br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email : petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/jquery.lazy.min.js"></script>
 <script src="scripts/document.ready.js"></script>
 <script src="scripts/petermraz.js"></script>
 <script>
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
         var valid = true;
-
-        if (!$('#Name').val().trim()) {
-            $('#nameError').show(); valid = false;
-        } else { $('#nameError').hide(); }
-
-        if (!$('#Email').val().trim()) {
-            $('#emailError').show(); valid = false;
-        } else { $('#emailError').hide(); }
-
-        if (!$('#Text').val().trim()) {
-            $('#textError').show(); valid = false;
-        } else { $('#textError').hide(); }
-
-        if (!valid) {
-            $('#validationSummary').show();
-            return;
-        }
+        if (!$('#Name').val().trim()) { $('#nameError').show(); valid = false; } else { $('#nameError').hide(); }
+        if (!$('#Email').val().trim()) { $('#emailError').show(); valid = false; } else { $('#emailError').hide(); }
+        if (!$('#Text').val().trim()) { $('#textError').show(); valid = false; } else { $('#textError').hide(); }
+        if (!valid) { $('#validationSummary').show(); return; }
         $('#validationSummary').hide();
-
         $.ajax({
             url: $(this).attr('action'),
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
-            success: function() {
-                $('#contactFormWrapper').hide();
-                $('#successMsg').show();
-            },
-            error: function() {
-                window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Message from website&body='
-                    + encodeURIComponent($('#Text').val());
-            }
+            success: function() { $('#contactFormWrapper').hide(); $('#successMsg').show(); },
+            error: function() { window.location.href = 'mailto:petermraz@mrazosoft.sk?subject=Message from website&body=' + encodeURIComponent($('#Text').val()); }
         });
     });
 

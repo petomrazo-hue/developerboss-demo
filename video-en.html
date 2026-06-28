@@ -4,18 +4,34 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Video — Peter Mráz" />
+    <meta name="copyright" content="Mrazosoft" />
+    <meta name="description" content="Video — Peter Mráz." />
+    <meta name="language" content="en" />
     <meta name="author" content="Mrazosoft" />
+    <meta name="robots" content="index, noodp" />
+    <link rel="shortcut icon" href="images/melAdidi2.jpeg" />
+
     <title>Video — Peter Mráz</title>
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/lightslider.min.css" />
+    <link rel="stylesheet" href="css/lightgallery.min.css" />
+
+    <script src="scripts/jquery.lazy.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="scripts/jquery.validate.unobtrusive.min.js"></script>
+
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
 
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.webm" type="video/webm">
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
@@ -49,47 +65,35 @@
         <div class="container">
 
             <h1>Video</h1>
-
             <h2>YouTube</h2>
-
             <div class="row">
                 <div class="col-md-4">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/XjSRdxhSE6A"
-                                frameborder="0"
-                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/XjSRdxhSE6A" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/0cLuXJNyXd8"
-                                frameborder="0"
-                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/0cLuXJNyXd8" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/RgjH0KOOa_0"
-                                frameborder="0"
-                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/RgjH0KOOa_0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
             <h2>Local Video</h2>
-
             <div class="row">
                 <div class="col-md-6">
                     <div class="video-container">
-                        <video src="media/video/nemal-iphone.mp4" controls></video>
+                        <video src="media/video/lokalnevideo1.mp4" controls></video>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="video-container">
-                        <video src="media/video/semafor.mp4" controls></video>
+                        <video src="media/video/lokalnevideo2.mp4" controls></video>
                     </div>
                 </div>
             </div>
@@ -100,12 +104,17 @@
 
 <div class="container">
     <div class="pata">
-        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk
+        <br />
+        Tel: +421 9XX XXX XXX
+        <br />
+        Email : petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/jquery.lazy.min.js"></script>
 <script src="scripts/document.ready.js"></script>
+<script src="scripts/petermraz.js"></script>
 <script>
     document.getElementById("toggleLanguageButton").addEventListener("click", function () {
         window.location.href = "video.html";
