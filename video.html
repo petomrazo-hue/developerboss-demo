@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Videa — Peter Mráz" />
+    <meta name="author" content="Mrazosoft" />
+    <title>Videa — Peter Mráz</title>
+    <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
+</head>
+<body>
+
+<video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
+    <source src="media/video/portfolio.mp4" type="video/mp4">
+</video>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="tlacitko-moje" id="toggleLanguageButton">SK/EN</button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html"><img src="images/melAdidi2.jpeg" alt="melAdidi" /></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="vzdelanie.html">Vzdelanie</a></li>
+                <li><a href="galeria.html">Fotogaléria</a></li>
+                <li class="active"><a href="video.html">Videa</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="prihlasenie.html">Prihlásenie</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="page-body">
+    <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 40px 0 60px;">
+        <div class="container">
+
+            <h2>Videa</h2>
+            <hr />
+
+            <!-- Rekonštrukcia LocalVideo.cshtml — nemal-iphone.mp4 -->
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-md-12">
+                    <h3>Nemal iPhone</h3>
+                    <div class="video-container">
+                        <video src="media/video/nemal-iphone.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rekonštrukcia LocalVideo.cshtml — semafor.mp4 -->
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-md-12">
+                    <h3>Semafor</h3>
+                    <div class="video-container">
+                        <video src="media/video/semafor.mp4" controls></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rekonštrukcia YouTubeVideo.cshtml -->
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-md-12">
+                    <h3>Developer Boss — kurz</h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/aXOChLn5ZdQ"
+                                frameborder="0"
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="pata">
+        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />
+        Email: petermraz@mrazosoft.sk
+    </div>
+</div>
+
+<script src="scripts/document.ready.js"></script>
+<script>
+    document.getElementById("toggleLanguageButton").addEventListener("click", function () {
+        window.location.href = "videos.html";
+    });
+</script>
+</body>
+</html>
