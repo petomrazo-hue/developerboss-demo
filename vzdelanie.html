@@ -8,20 +8,17 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Vzdelanie Petra Mráza — školy, kurzy a certifikáty." />
+    <meta name="description" content="Vzdelanie Petra Mráza." />
     <meta name="author" content="Mrazosoft" />
     <title>Vzdelanie — Peter Mráz</title>
-
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- Videopozadie -->
 <video class="portfolio" poster="images/melAdidi2.jpeg" playsinline autoplay muted loop>
     <source src="media/video/portfolio.mp4" type="video/mp4">
 </video>
 
-<!-- Navigácia -->
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -32,9 +29,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html">
-                <img src="images/melAdidi2.jpeg" alt="Peter Mráz" />
-            </a>
+            <a href="index.html"><img src="images/melAdidi2.jpeg" alt="melAdidi" /></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -42,16 +37,17 @@
                 <li class="active"><a href="vzdelanie.html">Vzdelanie</a></li>
                 <li><a href="galeria.html">Fotogaléria</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="prihlasenie.html">Prihlásenie</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Obsah (rekonštrukcia Vzdelanie.cshtml + education.cshtml) -->
 <div class="page-body">
-    <div style="background: rgba(255,255,255,0.92); min-height: 100vh; padding: 40px 0 60px;">
+    <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 40px 0 60px;">
         <div class="container">
 
+            <!-- Rekonštrukcia Vzdelanie.cshtml (VzdelanieModel) -->
             <div class="telo">
                 <h1>VZDELANIE</h1>
                 <div class="row">
@@ -70,36 +66,39 @@
                 </div>
 
                 <h2>KURZY A CERTIFIKÁTY</h2>
+                <!-- Rekonštrukcia Kurzy.cs: zoznamKurzov[] — 8 položiek -->
                 <div class="row">
                     <div class="col-md-3">
                         <ul>
                             <li>Kurz HTML</li>
                             <li>Kurz CSS</li>
                             <li>Kurz MVC</li>
-                            <li>Bootstrap</li>
+                            <li>Kurz Bootstrap</li>
                             <li>Barmanský kurz</li>
+                            <li>Kurz 6</li>
+                            <li>Kurz 7</li>
+                            <li>Kurz 8</li>
                         </ul>
                     </div>
                     <div class="col-md-9">
-                        <!-- Developer Boss kurz — hlavný kurz -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Developer Boss — DUFEKSOFT</h3>
+                                <strong>Developer Boss — DUFEKSOFT (hlavný kurz)</strong>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-md-4"><span class="label label-primary">Modul 1</span> Úvod &amp; nástroje</div>
-                                    <div class="col-md-4"><span class="label label-primary">Modul 2</span> HTML</div>
-                                    <div class="col-md-4"><span class="label label-primary">Modul 3</span> CSS</div>
-                                    <div class="col-md-4"><span class="label label-info">Modul 4</span> MVC</div>
-                                    <div class="col-md-4"><span class="label label-info">Modul 5</span> Bootstrap</div>
-                                    <div class="col-md-4"><span class="label label-info">Modul 6</span> Formuláre</div>
-                                    <div class="col-md-4"><span class="label label-success">Modul 7</span> C#</div>
-                                    <div class="col-md-4"><span class="label label-success">Modul 8</span> CMS</div>
-                                    <div class="col-md-4"><span class="label label-success">Modul 9</span> CMS 2</div>
-                                    <div class="col-md-4"><span class="label label-warning">Modul 10</span> Základy eshopu</div>
-                                    <div class="col-md-4"><span class="label label-warning">Modul 11</span> Realizácia eshopu</div>
-                                    <div class="col-md-4"><span class="label label-danger">Modul 12</span> Optimalizácie</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M1 — Úvod &amp; nástroje</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M2 — HTML</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M3 — CSS</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M4 — MVC</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M5 — Bootstrap</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M6 — Formuláre</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M7 — C#</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M8 — CMS</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M9 — CMS 2</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M10 — Základy eshopu</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M11 — Realizácia eshopu</div>
+                                    <div class="col-md-4" style="padding:4px 15px;">M12 — Optimalizácie</div>
                                 </div>
                             </div>
                         </div>
@@ -111,18 +110,13 @@
     </div>
 </div>
 
-<!-- Pätička -->
 <div class="container">
     <div class="pata">
-        <hr />
-        Copyright &copy; 2026 Mrazosoft.sk
-        <br />
-        Tel: +421 9XX XXX XXX
-        <br />
-        Email: petermraz@mrazosoft.sk
+        <hr />Copyright &copy; 2026 Mrazosoft.sk<br />Email: petermraz@mrazosoft.sk
     </div>
 </div>
 
+<script src="scripts/document.ready.js"></script>
 <script>
     document.getElementById("toggleLanguageButton").addEventListener("click", function () {
         window.location.href = "education.html";

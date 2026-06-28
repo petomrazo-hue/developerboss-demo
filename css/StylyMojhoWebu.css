@@ -294,3 +294,42 @@
 .api-password-group {
     display: none
 }
+
+/* === Form štýly (z ContactForm.cshtml, Login.cshtml) === */
+.form-item {
+    padding: 10px 0;
+}
+
+.form-section {
+    padding: 15px 0;
+}
+
+.naplnspajzu-form .row.submit {
+    padding-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.developerboss-form .form-item,
+.naplnspajzu-form .form-item {
+    padding: 8px 0;
+}
+
+/* Správa po odoslaní */
+p.medium {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Chránená stránka */
+.member-info {
+    padding: 20px 0;
+    font-size: 18px;
+}
