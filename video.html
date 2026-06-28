@@ -8,9 +8,9 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Videa — Peter Mráz" />
+    <meta name="description" content="Video — Peter Mráz" />
     <meta name="author" content="Mrazosoft" />
-    <title>Videa — Peter Mráz</title>
+    <title>Video — Peter Mráz</title>
     <link href="css/StylyMojhoWebu.css" rel="stylesheet" />
 </head>
 <body>
@@ -35,8 +35,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.html">Domov</a></li>
                 <li><a href="vzdelanie.html">Vzdelanie</a></li>
-                <li><a href="galeria.html">Fotogaléria</a></li>
-                <li class="active"><a href="video.html">Videa</a></li>
+                <li><a href="galeria.html">Fotografie</a></li>
+                <li class="active"><a href="video.html">Video</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
                 <li><a href="prihlasenie.html">Prihlásenie</a></li>
             </ul>
@@ -48,38 +48,52 @@
     <div style="background: rgba(255,255,255,0.92); min-height: 80vh; padding: 40px 0 60px;">
         <div class="container">
 
-            <h2>Videa</h2>
-            <hr />
+            <!-- Presná rekonštrukcia z DB: One Column → Three Column → One Column → Two Column -->
 
-            <!-- Rekonštrukcia LocalVideo.cshtml — nemal-iphone.mp4 -->
-            <div class="row" style="margin-bottom: 40px;">
-                <div class="col-md-12">
-                    <h3>Nemal iPhone</h3>
+            <h1>Video</h1>
+
+            <h2>YouTube</h2>
+
+            <!-- Three Column (col-md-4 každý) — YouTubeVideo makro -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/XjSRdxhSE6A"
+                                frameborder="0"
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/0cLuXJNyXd8"
+                                frameborder="0"
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/RgjH0KOOa_0"
+                                frameborder="0"
+                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <h2>LokálneVideo</h2>
+
+            <!-- Two Column (col-md-6 každý) — LocalVideo makro -->
+            <div class="row">
+                <div class="col-md-6">
                     <div class="video-container">
                         <video src="media/video/nemal-iphone.mp4" controls></video>
                     </div>
                 </div>
-            </div>
-
-            <!-- Rekonštrukcia LocalVideo.cshtml — semafor.mp4 -->
-            <div class="row" style="margin-bottom: 40px;">
-                <div class="col-md-12">
-                    <h3>Semafor</h3>
+                <div class="col-md-6">
                     <div class="video-container">
                         <video src="media/video/semafor.mp4" controls></video>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rekonštrukcia YouTubeVideo.cshtml -->
-            <div class="row" style="margin-bottom: 40px;">
-                <div class="col-md-12">
-                    <h3>Developer Boss — kurz</h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/aXOChLn5ZdQ"
-                                frameborder="0"
-                                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -98,7 +112,7 @@
 <script src="scripts/document.ready.js"></script>
 <script>
     document.getElementById("toggleLanguageButton").addEventListener("click", function () {
-        window.location.href = "videos.html";
+        window.location.href = "video-en.html";
     });
 </script>
 </body>
